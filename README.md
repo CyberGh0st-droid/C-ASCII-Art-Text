@@ -10,3 +10,4 @@ printstring("string", &Graffiti);
 
 keep in mind that if the total lenght of a line of the resulting ascii art for an input string is longer than the line of the console text wrapping will occur and the output won't look as intended
 
+READ THE CODE BEFORE COMPILING AND USING. I WILL NOT BE HELD LIABLE FOR ANY INCONVENIENCE OR DAMAGES CAUSED BY THE USE OF THIS LIBRARY
