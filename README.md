@@ -10,5 +10,6 @@ printstring("string", &Graffiti);
 
 keep in mind that if the total lenght of a line of the resulting ascii art for an input string is longer than the line of the console text wrapping will occur and the output won't look as intended
 
-READ THE CODE BEFORE COMPILING AND USING. AND ONLY IF YOU ARE CONFIDENT THAT IT IS SAFE TO USE SHOULD YOU COMPILE AND USE IT
+READ THE CODE BEFORE COMPILING AND USING. AND ONLY IF YOU ARE CONFIDENT THAT IT IS SAFE TO USE SHOULD YOU COMPILE AND USE IT.
+
 I WILL NOT BE HELD LIABLE FOR ANY INCONVENIENCE OR DAMAGES CAUSED BY THE USE OF THIS LIBRARY
