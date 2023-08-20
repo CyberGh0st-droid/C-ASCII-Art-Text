@@ -3,7 +3,7 @@
 #include "conio.h"
 #include "ascii_art_fonts.c"
 
-//this is main.c wich includes "ascii_art_fonts.h", and the functions are written in ascilib.c and defined in ascii_art_fonts.h
+//this is main.c wich includes "ascii_art_fonts.h", and the functions are defined in ascii_art_fonts.h
 
 int main() {
     while (1) {

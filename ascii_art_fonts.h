@@ -2,6 +2,7 @@
 #ifndef ASCII_ART_FONTS_H
 #define ASCII_ART_FONTS_H
 
+
 typedef struct {
     char A[10][20];
     char B[10][20];
@@ -112,7 +113,8 @@ asciiFont Graffiti = {
         "     |    |    ",
         "     |    |    ",
         " /\\__|    |    ",
-        " \\________|    "
+        " \\________|    ",
+        "               "
     }, 
     .K = { 
         "  ____  __.    ",
@@ -254,6 +256,7 @@ asciiFont Graffiti = {
 };
 
 int printchar(char Alpha, asciiFont* Font);
+int printstring(char* Alpha, asciiFont* Font);
 
 extern asciiFont Graffiti;
 
