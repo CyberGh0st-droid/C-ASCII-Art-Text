@@ -6,9 +6,9 @@
 #include <windows.h>
 
 int printchar(char Alpha, asciiFont* Font) {
-    char (*asciiArray)[20] = NULL;
+    char (*asciiArray)[20] = NULL; //variable pointer for pointing to the font character
 
-    switch (toupper(Alpha)) {
+    switch (toupper(Alpha)) { //switch case for selecting the right character based on given input
     case 'A':
         asciiArray = Font->A;
         break;
@@ -93,26 +93,26 @@ int printchar(char Alpha, asciiFont* Font) {
         printf("Character not found in the font.\n");
         return 1; // Return an error code
 }
-    int lines = Font->Lines;
-    for (int i = 0; i <= lines; i++) {
-        printf("%s\n", asciiArray[i]);
+    int lines = Font->Lines;    //get the amount of lines that the Font passed in the Font argument uses for the highest character ascii art
+    for (int i = 0; i <= lines; i++) {  //iterate through each line of the character ascii art defined in ascii font structure for the equevelent character of the Alpha argument
+        printf("%s\n", asciiArray[i]);  //print the string for the line
     }
     return 0;   
 }
 
 int printstring(char* Alpha, asciiFont* Font) {
-    int length = strlen(Alpha) ;
+    int length = strlen(Alpha) ; // lenght of the input string including null terminator
     
-    int lines = Font->Lines;
+    int lines = Font->Lines;     // the amount of lines taken up by each character of the given font
     
-    char (*asciiArray)[20] = NULL;
+    char (*asciiArray)[20] = NULL;  //array pointer for pointing to a character in the Font struct
     
-    for (int CurrentLine = 0; CurrentLine <= lines; CurrentLine++) {
-        for (int b = 0; b < length; b++) {
+    for (int CurrentLine = 0; CurrentLine <= lines; CurrentLine++) { //iterate through each line to the amount of lines the font needs defined in font structure
+        for (int b = 0; b < length; b++) {  //iterate through the characters of the current line then go to next line and repeat
            
             //printf("aaaa%d", b);
             //printf("Current Character: %c; @ Line %d;\n", Alpha[b], CurrentLine);
-            switch (toupper(Alpha[b])) {
+            switch (toupper(Alpha[b])) {    // switch case to store pointer to current character in asciiArray
                 case 'A':
                     asciiArray = Font->A;
                     break;
@@ -206,10 +206,10 @@ int printstring(char* Alpha, asciiFont* Font) {
                     //printf("undefined character: %d", Alpha[b]);
                     return 1;
             }
-                        printf("%s", asciiArray[CurrentLine]);
+                        printf("%s", asciiArray[CurrentLine]); //finally print the current character's current line
             //printf("%d, %c ::", CurrentLine, Alpha[b]);
         }
-        printf("\n");
+        printf("\n"); // when done automatically go to new line
         
     }
 
